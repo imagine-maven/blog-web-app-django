@@ -1,0 +1,19 @@
+<!-- extending base template here from blog app -->
+{% extends "blog/base.html" %}
+
+<!-- CSRF token, cross site request forgery token it is mandatory in django -->
+{% block content %}
+    <div class ="content-section">
+       
+        <div class="container">
+            <h2 >You have been logged out</h2>
+        </div>
+        <div class = "border-top py-2">
+            <small class = "text-muted">
+                <a class="ml-3" href="{% url 'login' %}">Log In Again</a>
+            </small>
+
+        </div>
+
+    </div>
+{% endblock content %}
